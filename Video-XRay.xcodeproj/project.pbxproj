@@ -10,9 +10,12 @@
 		C43661EE247D8544005C0C9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43661ED247D8544005C0C9F /* AppDelegate.swift */; };
 		C43661F0247D8544005C0C9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43661EF247D8544005C0C9F /* SceneDelegate.swift */; };
 		C43661F2247D8544005C0C9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43661F1247D8544005C0C9F /* ViewController.swift */; };
-		C43661F5247D8544005C0C9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C43661F3247D8544005C0C9F /* Main.storyboard */; };
 		C43661F7247D8547005C0C9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C43661F6247D8547005C0C9F /* Assets.xcassets */; };
 		C43661FA247D8547005C0C9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C43661F8247D8547005C0C9F /* LaunchScreen.storyboard */; };
+		C4366202247D8586005C0C9F /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C4366201247D8585005C0C9F /* SqueezeNet.mlmodel */; };
+		C4366204247D8628005C0C9F /* CapturePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4366203247D8628005C0C9F /* CapturePreviewView.swift */; };
+		C4366206247D9474005C0C9F /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4366205247D9474005C0C9F /* UIView+Layout.swift */; };
+		C4366208247D9E4F005C0C9F /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4366207247D9E4F005C0C9F /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +23,13 @@
 		C43661ED247D8544005C0C9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C43661EF247D8544005C0C9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C43661F1247D8544005C0C9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C43661F4247D8544005C0C9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C43661F6247D8547005C0C9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C43661F9247D8547005C0C9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C43661FB247D8547005C0C9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4366201247D8585005C0C9F /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
+		C4366203247D8628005C0C9F /* CapturePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturePreviewView.swift; sourceTree = "<group>"; };
+		C4366205247D9474005C0C9F /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		C4366207247D9E4F005C0C9F /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +64,14 @@
 			children = (
 				C43661ED247D8544005C0C9F /* AppDelegate.swift */,
 				C43661EF247D8544005C0C9F /* SceneDelegate.swift */,
+				C4366203247D8628005C0C9F /* CapturePreviewView.swift */,
+				C4366205247D9474005C0C9F /* UIView+Layout.swift */,
 				C43661F1247D8544005C0C9F /* ViewController.swift */,
-				C43661F3247D8544005C0C9F /* Main.storyboard */,
+				C4366207247D9E4F005C0C9F /* ResultsViewController.swift */,
 				C43661F6247D8547005C0C9F /* Assets.xcassets */,
 				C43661F8247D8547005C0C9F /* LaunchScreen.storyboard */,
 				C43661FB247D8547005C0C9F /* Info.plist */,
+				C4366201247D8585005C0C9F /* SqueezeNet.mlmodel */,
 			);
 			path = "Video-XRay";
 			sourceTree = "<group>";
@@ -127,7 +136,6 @@
 			files = (
 				C43661FA247D8547005C0C9F /* LaunchScreen.storyboard in Resources */,
 				C43661F7247D8547005C0C9F /* Assets.xcassets in Resources */,
-				C43661F5247D8544005C0C9F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,21 +148,17 @@
 			files = (
 				C43661F2247D8544005C0C9F /* ViewController.swift in Sources */,
 				C43661EE247D8544005C0C9F /* AppDelegate.swift in Sources */,
+				C4366206247D9474005C0C9F /* UIView+Layout.swift in Sources */,
+				C4366208247D9E4F005C0C9F /* ResultsViewController.swift in Sources */,
 				C43661F0247D8544005C0C9F /* SceneDelegate.swift in Sources */,
+				C4366204247D8628005C0C9F /* CapturePreviewView.swift in Sources */,
+				C4366202247D8586005C0C9F /* SqueezeNet.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C43661F3247D8544005C0C9F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C43661F4247D8544005C0C9F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C43661F8247D8547005C0C9F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,6 +291,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6PPL8837AU;
 				INFOPLIST_FILE = "Video-XRay/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +299,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lassesilkoset.Video-XRay";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,6 +310,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6PPL8837AU;
 				INFOPLIST_FILE = "Video-XRay/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +318,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lassesilkoset.Video-XRay";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
